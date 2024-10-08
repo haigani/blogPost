@@ -10,7 +10,7 @@ class Post(models.Model):
         return self.title
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     post = models.ForeignKey("Post", on_delete=models.CASCADE)
     text = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
